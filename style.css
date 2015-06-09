@@ -41,7 +41,7 @@ label {
   -webkit-animation: enter 3s;
 }
 body {
-  background-image: url("/images/background.jpg");
+  background-image: url("background.jpg");
   background-attachment: fixed;
 }
 @-webkit-keyframes hover {
