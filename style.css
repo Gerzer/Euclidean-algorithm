@@ -3,12 +3,14 @@ h1 {
   font-weight: 100;
   font-size: 92px;
   text-align: center;
+  color: #333333;
 }
 h2 {
   font-family: "Avenir", "Lato";
   font-weight: 100;
   font-size: 64px;
   text-align: center;
+  color: #333333;
 }
 h3 {
   font-family: "Avenir", "Lato";
