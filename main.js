@@ -1,6 +1,9 @@
 var timer;
+var GCDResult;
+var randomIntegerA;
+var randomIntegerB;
 function updateTimer() {
-  document.getElementById("timer").textContent = parseInt(document.getElementById("timer").textContent) + 1;
+  document.getElementById("timer").textContent = (parseInt(document.getElementById("timer").textContent) + 1).toString();
 }
 function startTimer() {
   timer = window.setInterval(updateTimer, 1000);
@@ -8,16 +11,25 @@ function startTimer() {
   document.getElementById("start-timer").disabled = "disabled";
 }
 function submitAnswer() {
-  // body...
+  if (document.getElementById("answer").value == GCDResult.toString()) {
+    document.getElementById("problem-div").style.display = "none";
+    alert("You answered correctly in " + document.getElementById("timer").textContent + "seconds.");
+  } else {
+    document.getElementById("problem-div").style.display = "none";
+    alert("You answered incorrectly in " + document.getElementById("timer").textContent + "seconds.");
+  }
 }
 function isTouchDevice() {
   return !!('ontouchstart' in window);
 }
 function getGCD(a, b) {
-    if (b == 0) {
-      return a;
-    }
-    return getGCD(b, a % b);
+  if (b == 0) {
+    return a;
+  }
+  return getGCD(b, a % b);
+}
+function getRandomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 function initializeSkrollr() {
   if (!isTouchDevice()) {
@@ -30,5 +42,9 @@ function initializeSkrollr() {
     }
     skrollr.init();
   }
-
+  while (GCDResult < 30 || randomIntegerA != randomIntegerB) {
+    randomIntegerA = getRandomInteger(150, 5000);
+    randomIntegerB = getRandomInteger(150, 5000);
+    GCDResult = getGCD(randomIntegerA, randomIntegerB);
+  }
 }
