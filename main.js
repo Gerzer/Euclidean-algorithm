@@ -13,6 +13,12 @@ function submitAnswer() {
 function isTouchDevice() {
   return !!('ontouchstart' in window);
 }
+function getGCD(a, b) {
+    if (b == 0) {
+      return a;
+    }
+    return getGCD(b, a % b);
+}
 function initializeSkrollr() {
   if (!isTouchDevice()) {
     var containers = document.getElementsByClassName("container");
@@ -24,4 +30,5 @@ function initializeSkrollr() {
     }
     skrollr.init();
   }
+
 }
