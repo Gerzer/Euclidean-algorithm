@@ -11,12 +11,12 @@ function startTimer() {
   document.getElementById("start-timer").disabled = "disabled";
 }
 function submitAnswer() {
+  document.getElementById("problem-div").style.display = "none";
+  window.clearInterval(timer);
   if (document.getElementById("answer").value == GCDResult.toString()) {
-    document.getElementById("problem-div").style.display = "none";
-    alert("You answered correctly in " + document.getElementById("timer").textContent + "seconds.");
+    alert("You answered correctly in " + document.getElementById("timer").textContent + " seconds.");
   } else {
-    document.getElementById("problem-div").style.display = "none";
-    alert("You answered incorrectly in " + document.getElementById("timer").textContent + "seconds.");
+    alert("You answered incorrectly in " + document.getElementById("timer").textContent + " seconds.");
   }
 }
 function isTouchDevice() {
