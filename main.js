@@ -7,6 +7,9 @@ function startTimer() {
   document.getElementById("problem-div").style.display = "";
   document.getElementById("start-timer").disabled = "disabled";
 }
+function submitAnswer() {
+  // body...
+}
 function isTouchDevice() {
   return !!('ontouchstart' in window);
 }
