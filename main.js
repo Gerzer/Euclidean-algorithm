@@ -42,9 +42,9 @@ function initializeSkrollr() {
     }
     skrollr.init();
   }
-  while (GCDResult < 30 || randomIntegerA == randomIntegerB) {
-    randomIntegerA = getRandomInteger(150, 5000);
-    randomIntegerB = getRandomInteger(150, 5000);
+  while (GCDResult < 100 || randomIntegerA == randomIntegerB) {
+    randomIntegerA = getRandomInteger(1000, 5000);
+    randomIntegerB = getRandomInteger(1000, 5000);
     GCDResult = getGCD(randomIntegerA, randomIntegerB);
   }
   document.getElementById("integer-a").textContent = randomIntegerA.toString();
