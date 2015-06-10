@@ -47,9 +47,6 @@ function initializeSkrollr() {
     randomIntegerB = getRandomInteger(150, 5000);
     GCDResult = getGCD(randomIntegerA, randomIntegerB);
   }
-  console.log(getRandomInteger(150, 5000).toString());
-  console.log(randomIntegerA.toString());
-  console.log(randomIntegerB.toString());
   document.getElementById("integer-a").textContent = randomIntegerA.toString();
   document.getElementById("integer-b").textContent = randomIntegerB.toString();
 }
