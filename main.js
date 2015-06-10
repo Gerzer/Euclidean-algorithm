@@ -42,7 +42,7 @@ function initializeSkrollr() {
     }
     skrollr.init();
   }
-  while (GCDResult < 30 || randomIntegerA != randomIntegerB) {
+  while (GCDResult < 30 || randomIntegerA == randomIntegerB) {
     randomIntegerA = getRandomInteger(150, 5000);
     randomIntegerB = getRandomInteger(150, 5000);
     GCDResult = getGCD(randomIntegerA, randomIntegerB);
