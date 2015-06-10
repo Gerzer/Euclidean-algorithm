@@ -18,6 +18,7 @@ function submitAnswer() {
   } else {
     alert("You answered incorrectly in " + document.getElementById("timer").textContent + " seconds.");
   }
+  document.getElementById("algorithm-div").style.display = "";
 }
 function isTouchDevice() {
   return !!('ontouchstart' in window);
