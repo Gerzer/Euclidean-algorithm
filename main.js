@@ -9,6 +9,7 @@ function startTimer() {
   timer = window.setInterval(updateTimer, 1000);
   document.getElementById("problem-div").style.display = "";
   document.getElementById("start-timer").disabled = "disabled";
+  skrollr.init();
 }
 function submitAnswer() {
   document.getElementById("problem-div").style.display = "none";
@@ -19,6 +20,7 @@ function submitAnswer() {
     alert("You answered incorrectly in " + document.getElementById("timer").textContent + " seconds.");
   }
   document.getElementById("algorithm-div").style.display = "";
+  skrollr.init();
 }
 function isTouchDevice() {
   return !!('ontouchstart' in window);

@@ -35,6 +35,9 @@ label {
   font-weight: 200;
   font-size: 24px;
 }
+.emphasis {
+  font-size: 20px;
+}
 .container {
   text-align: center;
   background-color: rgba(255, 120, 0, 0.65);
