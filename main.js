@@ -8,6 +8,7 @@ function updateTimer() {
 function startTimer() {
   timer = window.setInterval(updateTimer, 1000);
   document.getElementById("problem-div").style.display = "";
+  document.getElementById("drawpad-div").style.display = "";
   document.getElementById("start-timer").disabled = "disabled";
 }
 function submitAnswer() {
