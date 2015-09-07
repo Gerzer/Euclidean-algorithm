@@ -9,39 +9,56 @@
     <script src="skrollr.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="main.js"></script>
-    <title>Euclidean algorithm</title>
+    <title>Euclidean Algorithm</title>
   </head>
   <body onload="initializeSkrollr();">
     <br><br><br>
     <div class="container">
-      <h1>Modular arithmetic</h1>
+      <h1>Modular Arithmetic</h1>
     </div>
     <br>
     <div class="container">
-      <h2>History of modular arithmetic</h2>
-      <p>Modular arithmetic's foundations were first introduced in the third century BCE by an Greek mathematician named Euclid in the 7th book of his book,<i> Elements.</i></p>
-      <p>In <i>Elements (The seventh book)</i>, Euclid discusses divisibility, prime numbers, and his algorithm for finding GCDs of large numbers. The book also starts to introduce
-      what we now know as "The fundemental theorum of arithmetic", which in number theory states that every positive number (greater than 1) can be written out as a product of primes
-      in an unique way.</p>
-      <p>This new way of finding GCDs, LCMs, and prime number factorization of large numbers was a huge step forward in the world of math and cryptography.</p>
-    </div>
-    <br>
-    <div class="container">
-      <p>Modular arithmetic focuses on the quotients and operaters or division operations.<br>In modular arithmetic, the remainder is especially important when dividing two numbers, and when focusing on the remainder, an operater called, the modulo operater is used. Mod operaters and moduar arithmetic is also used often in cryptography.</p>
+      <h2>History of Modular Arithmetic</h2>
+      <p>
+        Modular arithmetic's foundations were first introduced in the third century BCE by an Greek mathematician named Euclid in the 7th book of his book <i>Elements.</i>
+      </p>
+      <p>
+        In <i>Elements (The seventh book)</i>, Euclid discusses divisibility, prime numbers, and his algorithm for finding GCDs of large numbers. The book also starts to introduce what we now know as "The fundemental theorum of arithmetic", which in number theory states that every positive number (greater than 1) can be written out as a product of primes in an unique way.
+      </p>
+      <p>
+        This new way of finding GCDs, LCMs, and prime number factorization of large numbers was a huge step forward in the world of math and cryptography.
+      </p>
+      <p>
+        Modular arithmetic focuses on the quotients and operaters or division operations.<br>In modular arithmetic, the remainder is especially important when dividing two numbers, and when focusing on the remainder, an operater called the "modulo" operater is used. Mod operaters and moduar arithmetic are used often in cryptography, but we'll get to that later.
+      </p>
     </div>
     <br>
     <div class="container">
       <h2>Modulo Basics</h2>
       <p>When dividing numbers, the basic equation outline looks like this:</p>
-      <h3 class="emphasis"><b><i>A divided by B = Q remainder R</b></i></h3>
+      <h3 class="emphasis"><b><i>A ÷ B = Q remainder R</b></i></h3>
       <p><b><i>A</i></b> is the dividend<p>
       <p><b><i>B</i></b> is the divisor<p>
       <p><b><i>Q</i></b> is the quotient<p>
       <p><b><i>R</i></b> is the remainder<p>
-      <p>When using the modular operator, we are mainly focusing on the remainder. Using A, B, Q, & R, we can conclude that <i>A mod B = R</i></p>
-      <p>For example:</p>
-      <p>16 divided 5 = 3 remainder 1</p>
-      <p>Therefore <b>16 mod 5 = 1</b></p>
+      <p>
+        When using the modular operator, we are mainly focusing on the remainder. Using A, B, Q, and R, we can conclude that <i>A ≡ R (mod B)</i> (you would pronounce this "A is equivalent to R, mod B").
+      </p>
+      <p>
+        For example:
+      </p>
+      <p>
+        16 ÷ 5 = 3 remainder 1, therefore <b>16 ≡ 1 (mod 5)</b>.
+      </p>
+    </div>
+    <div class="container">
+      <h2>One Step Further</h2>
+      <p>
+        Did you know that not only is 16 ≡ 1 (mod 5) true, but that 16 ≡ 31 (mod 5) as well? How does this work? Well, 31 ÷ 5 has a remainder of 1, and we've established that 16 ÷ 5 also has a remainder of 1, so 16 actually is equivalent to 31, mod 5 (of course)! Even 1 ÷ 5 has a remainder of 1.
+      </p>
+      <p>
+        Mod 5 can be thought of as a sort-of circular counting sytem. It goes 0, 1, 2, 3, 4, and then 5, which is actually the same as 0. 1 is the same as 6, 2 is the same as 7, 3 is the same as 8, and 4 is the same as 9. Remember, though, that 5 is just an example; the same concept applies to every single counting number out there.
+      </p>
     </div>
     <br>
     <div class="container">
@@ -63,11 +80,15 @@
       <h2>Drawing pad</h2>
       <h3>Draw your calculations here.</h3>
       <iframe src="http://eaw20024.github.io/Drawing-Pad/" width="85%" height="832"></iframe>
-      <p><a href="https://github.com/eaw20024/Drawing-Pad">Created</a> by GitHub users <a href="https://github.com/eaw20024">@eaw20024</a> and <a href="https://github.com/eaw5117">@eaw5117</a>. Used with <a href="https://github.com/eaw20024/Drawing-Pad/issues/1">permission</a>.</p>
+      <p>
+        <a href="https://github.com/eaw20024/Drawing-Pad">Created</a> by GitHub users <a href="https://github.com/eaw20024">@eaw20024</a> and <a href="https://github.com/eaw5117">@eaw5117</a>. Used with <a href="https://github.com/eaw20024/Drawing-Pad/issues/1">permission</a>.
+      </p>
     </div>
     <br>
     <div style="display: none;" id="algorithm-div" class="container">
       <h2>Euclidean algorithm</h2>
-      <p>The answer to the previous problem can be solved very quickly using the Euclidean algorithm.</p>
+      <p>
+        The answer to the previous problem can be solved very quickly using the Euclidean algorithm.
+      </p>
   </body>
 </html>
